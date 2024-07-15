@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatBot Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    #container {
+      text-align: left;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      background-size: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 1500px;
+      max-height: 200000000px;
+      margin: 0;
+      justify-content: center;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      width: calc(100% - 20px);
+    }
+    button {
+      background-color: #10d519;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #response {
+      position: relative;
+    }
+    #responseBox {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-height: 2000px;
+      overflow-y: auto;
+      display: none;
+    }
+    pre {
+      margin: 0;
+    }
+    .input_copy .icon {
+      cursor: pointer;
+      color: #ffffff;
+      margin-top: 10px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+    .flashBG {
+      animation-name: flash;
+      animation-timing-function: ease-out;
+      animation-duration: 1s;
+    }
+    @keyframes flash {
+      0% {
+        background: #28a745;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>ChatBot by Lorenzo</h1>
+    <form id="promptForm">
+      <label for="prompt">Provide a Question:</label><br>
+      <input type="text" id="prompt" name="prompt" placeholder="ask questions first"><br>
+      <button type="submit">Answer </button>
+    </form>
+    <div id="response">
+      <div id="responseBox" class="input_copy">
+        <pre><code class="txt language-javascript"></code></pre>
+        <i class="fa-regular fa-copy icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+  <script>
+    function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
+
+    $(document).ready(function() {
+      $('#promptForm').on('submit', async function(event) {
+        event.preventDefault();
+        const prompt = $('#prompt').val();
+
+        try {
+          let response = await fetch(`/typli?prompt=${encodeURIComponent(prompt)}`);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          let data = await response.json();
+
+          const responseBox = $('#responseBox .txt');
+          if (data.answer) {
+            responseBox.html(Prism.highlight(data.answer, Prism.languages.javascript, 'javascript'));
+            $('#responseBox').show(); 
+          } else if (data.error) {
+            responseBox.text(`Error: ${data.error}`);
+            $('#responseBox').show();
+          }
+        } catch (error) {
+          const responseBox = $('#responseBox .txt');
+          responseBox.text(`Error: ${error.message}`);
+          $('#responseBox').show(); 
+        }
+      });
+
+      $('.input_copy .icon').click(function() {
+        copyToClipboard('.input_copy .txt');
+        $('.input_copy .txt').addClass('flashBG').delay(1000).queue(function(){
+          $(this).removeClass('flashBG').dequeue();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
