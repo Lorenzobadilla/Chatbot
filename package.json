@@ -1,0 +1,25 @@
+{
+  "name": "Chatbot",
+  "version": "1.0.0",
+  "node": "20.x",
+  "description": "a simple ChatBot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lorenzo",
+    "chatbot"
+  ],
+  "author": "Lorenzo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "chalk": "^4.1.2",
+    "express": "^4.19.2",
+    "figlet": "^1.7.0"
+  }
+}

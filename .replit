@@ -1,0 +1,7 @@
+language = "nodejs"
+run = "npm run start"
+modules = ["nodejs-20"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
