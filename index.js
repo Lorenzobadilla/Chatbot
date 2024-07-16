@@ -1,4 +1,64 @@
-function _0xaa79(){const _0x3417b5=['log','44YRgVcs','22972QFcjtu','application/json','cyan','Bearer\x20undefined','chalk','prompt','debu','87aCFsbP','search','2dISQzn','listen','815890uLOzmX','status','678357GYSiCm','16ywhFZx','function\x20*\x5c(\x20*\x5c)','/chatbot.html','string','toString','chain','(((.+)+)+)+$','while\x20(true)\x20{}','axios','constructor','use','358896cvKnXV','body-parser','default','get','ChatBot\x20by\x20Lorenzo','data','red','apply','Failed\x20to\x20generate\x20text.\x20Please\x20try\x20again\x20later.','1920aWYzCu','https://typli.ai/api/generators/completion','46060ImcrEd','post','Standard','test','json','Server\x20is\x20is\x20running\x20in\x20PORT:','length','query','stateObject','Prompt\x20is\x20required','34927oGRdhV','counter','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','dir','2600CZurnD','gger'];_0xaa79=function(){return _0x3417b5;};return _0xaa79();}const _0x151eeb=_0x51d4;(function(_0x1d158f,_0x20adaf){const _0x19d25a=_0x51d4,_0x4fe4cc=_0x1d158f();while(!![]){try{const _0x3f92c2=-parseInt(_0x19d25a(0x155))/0x1*(-parseInt(_0x19d25a(0x130))/0x2)+parseInt(_0x19d25a(0x12e))/0x3*(-parseInt(_0x19d25a(0x127))/0x4)+parseInt(_0x19d25a(0x159))/0x5*(parseInt(_0x19d25a(0x149))/0x6)+parseInt(_0x19d25a(0x14b))/0x7+-parseInt(_0x19d25a(0x135))/0x8*(-parseInt(_0x19d25a(0x134))/0x9)+parseInt(_0x19d25a(0x132))/0xa+parseInt(_0x19d25a(0x126))/0xb*(-parseInt(_0x19d25a(0x140))/0xc);if(_0x3f92c2===_0x20adaf)break;else _0x4fe4cc['push'](_0x4fe4cc['shift']());}catch(_0x5e40b4){_0x4fe4cc['push'](_0x4fe4cc['shift']());}}}(_0xaa79,0x259cf));const _0x588419=(function(){let _0x570480=!![];return function(_0x281cc1,_0x28546d){const _0xd300e8=_0x570480?function(){const _0x5de7e2=_0x51d4;if(_0x28546d){const _0x2ec0a8=_0x28546d[_0x5de7e2(0x147)](_0x281cc1,arguments);return _0x28546d=null,_0x2ec0a8;}}:function(){};return _0x570480=![],_0xd300e8;};}()),_0x506c69=_0x588419(this,function(){const _0x301580=_0x51d4;return _0x506c69['toString']()[_0x301580(0x12f)](_0x301580(0x13b))[_0x301580(0x139)]()['constructor'](_0x506c69)[_0x301580(0x12f)]('(((.+)+)+)+$');});_0x506c69();const _0x13163c=(function(){let _0x44685c=!![];return function(_0x139cd2,_0x38f305){const _0x4a3898=_0x44685c?function(){if(_0x38f305){const _0x295a25=_0x38f305['apply'](_0x139cd2,arguments);return _0x38f305=null,_0x295a25;}}:function(){};return _0x44685c=![],_0x4a3898;};}());function _0x51d4(_0x3eca06,_0x1f4a0a){const _0x3db10d=_0xaa79();return _0x51d4=function(_0x2b267d,_0x13163c){_0x2b267d=_0x2b267d-0x124;let _0x414c10=_0x3db10d[_0x2b267d];return _0x414c10;},_0x51d4(_0x3eca06,_0x1f4a0a);}(function(){_0x13163c(this,function(){const _0x3aaecd=_0x51d4,_0x28ed64=new RegExp(_0x3aaecd(0x136)),_0x14347b=new RegExp(_0x3aaecd(0x157),'i'),_0x10af37=_0x2b267d('init');!_0x28ed64[_0x3aaecd(0x14e)](_0x10af37+_0x3aaecd(0x13a))||!_0x14347b[_0x3aaecd(0x14e)](_0x10af37+'input')?_0x10af37('0'):_0x2b267d();})();}());const express=require('express'),bodyParser=require(_0x151eeb(0x141)),chalk=require(_0x151eeb(0x12b)),figlet=require('figlet'),axios=require(_0x151eeb(0x13d)),app=express(),port=0x1f90;app[_0x151eeb(0x13f)](bodyParser['json']()),app[_0x151eeb(0x143)]('/',(_0x4d0b03,_0x4d560b)=>{const _0x6dbeb8=_0x151eeb;_0x4d560b['sendFile'](__dirname+_0x6dbeb8(0x137));}),app['get']('/typli',async(_0x512cda,_0x346461)=>{const _0x3468fd=_0x151eeb,_0x220a36=_0x512cda[_0x3468fd(0x152)][_0x3468fd(0x12c)];if(!_0x220a36)return _0x346461[_0x3468fd(0x133)](0x190)[_0x3468fd(0x14f)]({'error':_0x3468fd(0x154)});const _0x2fc3dd=_0x3468fd(0x14a),_0x45de2f={'Content-Type':_0x3468fd(0x128),'Authorization':_0x3468fd(0x12a)},_0x152a29={'prompt':_0x220a36,'temperature':1.2};try{const _0x500dae=await axios[_0x3468fd(0x14c)](_0x2fc3dd,_0x152a29,{'headers':_0x45de2f});return _0x500dae['status']===0xc8?_0x346461[_0x3468fd(0x14f)]({'answer':_0x500dae[_0x3468fd(0x145)]}):_0x346461[_0x3468fd(0x133)](0x1f4)[_0x3468fd(0x14f)]({'error':_0x3468fd(0x148)});}catch(_0x25fe1b){return _0x346461['status'](0x1f4)[_0x3468fd(0x14f)]({'error':_0x3468fd(0x148)});}}),app[_0x151eeb(0x131)](port,()=>{const _0x5f2ab9=_0x151eeb;console[_0x5f2ab9(0x125)](chalk[_0x5f2ab9(0x146)](_0x5f2ab9(0x150)+port)),figlet(_0x5f2ab9(0x144),{'font':_0x5f2ab9(0x14d),'horizontalLayout':_0x5f2ab9(0x142),'verticalLayout':_0x5f2ab9(0x142),'width':0x50,'whitespaceBreak':!![],'color':_0x5f2ab9(0x129)},(_0x57e4e9,_0x2a46d2)=>{const _0x50f1fb=_0x5f2ab9;if(_0x57e4e9){console['log']('Something\x20went\x20wrong...'),console[_0x50f1fb(0x158)](_0x57e4e9);return;}console['log'](chalk['green'](_0x2a46d2));});});function _0x2b267d(_0xda307f){function _0x1fb747(_0x581afc){const _0x4e8b8a=_0x51d4;if(typeof _0x581afc===_0x4e8b8a(0x138))return function(_0x317549){}[_0x4e8b8a(0x13e)](_0x4e8b8a(0x13c))['apply'](_0x4e8b8a(0x156));else(''+_0x581afc/_0x581afc)[_0x4e8b8a(0x151)]!==0x1||_0x581afc%0x14===0x0?function(){return!![];}[_0x4e8b8a(0x13e)]('debu'+_0x4e8b8a(0x124))['call']('action'):function(){return![];}['constructor'](_0x4e8b8a(0x12d)+_0x4e8b8a(0x124))[_0x4e8b8a(0x147)](_0x4e8b8a(0x153));_0x1fb747(++_0x581afc);}try{if(_0xda307f)return _0x1fb747;else _0x1fb747(0x0);}catch(_0x235080){}}
+const express = require('express');
+const bodyParser = require('body-parser');
+const chalk = require('chalk');
+const figlet = require('figlet');
+const axios = require('axios');
 
+const app = express();
+const port = 8080;
 
-module.exports = app;
+app.use(bodyParser.json());
+
+app.get('/chat', (req, res) => {
+  res.sendFile(__dirname + '/chatbot.html');
+});
+
+app.get('/typli', async (req, res) => {
+  const prompt = req.query.prompt;
+
+  if (!prompt) {
+    return res.status(400).json({ error: 'Prompt is required' });
+  }
+
+  const url = "https://typli.ai/api/generators/completion";
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer undefined"
+  };
+  const data = {
+    "prompt": prompt,
+    "temperature": 1.2
+  };
+
+  try {
+    const response = await axios.post(url, data, { headers });
+
+    if (response.status === 200) {
+      return res.json({ answer: response.data });
+    } else {
+      return res.status(500).json({ error: 'Failed to generate text. Please try again later.' });
+    }
+  } catch (error) {
+    return res.status(500).json({ error: 'Failed to generate text. Please try again later.' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(chalk.red(`Server is is running in PORT:${port}`));
+  // simple ChatBot by Lorenzo 
+  figlet('ChatBot by Lorenzo', {
+    font: 'Standard', // Choose a font, you can explore others
+    horizontalLayout: 'default', 
+    verticalLayout: 'default',
+    width: 80, 
+    whitespaceBreak: true,
+    color: 'cyan',
+  }, (err, data) => {
+    if (err) {
+      console.log('Something went wrong...');
+      console.dir(err);
+      return;
+    }
+    console.log(chalk.green(data));
+  });
+});

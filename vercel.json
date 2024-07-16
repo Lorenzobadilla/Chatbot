@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/chatbot",
-      "dest": "/chatbot.html"
+      "src": "/(.*)",
+      "dest": "chatbot.html"
     }
   ]
 }
