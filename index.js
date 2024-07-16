@@ -9,7 +9,7 @@ const port = 8080;
 
 app.use(bodyParser.json());
 
-app.get('/chat', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/chatbot.html');
 });
 
